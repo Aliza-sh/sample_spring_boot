@@ -1,4 +1,4 @@
-package com.aliza.sample_spring_boot.model
+package com.aliza.sample_spring_boot.model.student
 
 import jakarta.persistence.Entity
 import jakarta.persistence.Id
@@ -7,12 +7,11 @@ import jakarta.persistence.Id
 data class Student(
 
     @Id
-    var id: Long,
+    val name: String,
 
-    var name: String,
     val course: String,
     var score: Int
 
 ) {
-    constructor() : this(0, "", "", -1)
+    constructor() : this("", "", -1)
 }
